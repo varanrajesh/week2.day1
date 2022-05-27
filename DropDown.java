@@ -48,9 +48,17 @@ public class DropDown {
 
 
 		// Step 4 - Get number of drop down options
-		WebElement options = driver.findElement(By.className("dropdown"));
-		Select select = new Select(options);
-		System.out.println("The size of the drop down is : "+select.getOptions().size());
+		WebElement ele = driver.findElement(By.className("dropdown"));
+		Select sel = new Select(ele);
+		List<WebElement> options = sel.getOptions();
+		for(int i=0;i<options.size();i++)
+		{
+			WebElement elelist = options.get(i);
+			System.out.println("The options of the drop down is : "+elelist.getText());
+		}
+		System.out.println("The size of the drop down is : "+sel.getOptions().size());
+		
+
 
 
 
