@@ -54,7 +54,7 @@ public class DropDown {
 
 
 
-		// Step 4 - Get number of drop down options
+		// Step 5 - Sendkeys to select drop down options
 		WebElement send = driver.findElement(By.xpath("//*[@id=\"contentblock\"]/section/div[5]/select"));
 		send.sendKeys("Selenium");
 
